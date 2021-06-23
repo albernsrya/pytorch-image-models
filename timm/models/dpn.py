@@ -123,11 +123,6 @@ class DualPathBlock(nn.Module):
 
     @torch.jit._overload_method  # noqa: F811
     def forward(self, x):
-        # type: (Tuple[torch.Tensor, torch.Tensor]) -> Tuple[torch.Tensor, torch.Tensor]
-        pass
-
-    @torch.jit._overload_method  # noqa: F811
-    def forward(self, x):
         # type: (torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]
         pass
 
